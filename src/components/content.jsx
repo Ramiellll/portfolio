@@ -8,6 +8,8 @@ const detectMob = () => {
   return window.innerWidth <= 600;
 };
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const Content = () => {
   return (
     <div className={styles.contentContainer}>
@@ -50,14 +52,14 @@ const Content = () => {
             )
           }
         >
-          <img src="/linkedin.svg" height={30} width={30} />
+          <img src={prefix + "/linkedin.svg"} height={30} width={30} />
         </a>
         <a
           className={styles.svgContainer}
           style={{ marginLeft: "10px" }}
           onClick={() => openInNewTab("https://github.com/Ramiellll")}
         >
-          <img src="/github.svg" height={30} width={30} />
+          <img src={prefix + "/github.svg"} height={30} width={30} />
         </a>
       </div>
     </div>
