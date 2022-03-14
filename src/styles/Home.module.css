@@ -1,5 +1,8 @@
 .container {
-  padding: 0 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 2rem;
+  padding-right: 0;
 }
 
 .main {
@@ -108,9 +111,27 @@
   margin-left: 0.5rem;
 }
 
+.leftContainer {
+  float: left;
+  width: 50%;
+}
+
+.rightContainer {
+  float: right;
+  width: 50%;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .leftContainer {
+    width: 100%;
+  }
+
+  .rightContainer {
+    display: none;
   }
 }
